@@ -1,0 +1,209 @@
+.products {
+  //   border: 2px solid black;
+  width: 526px;
+  height: 144px;
+  margin-top: 24px;
+}
+
+.container1 {
+  display: flex;
+}
+
+.container2 {
+  display: flex;
+  margin-left: 112px;
+  margin-top: 12px;
+}
+
+.container3 {
+  display: flex;
+  margin-left: 112px;
+  margin-top: 12px;
+}
+
+.Option {
+  color: #999999;
+  font-family: Roboto;
+  font-size: 14px;
+  width: 122px;
+
+  margin-top: 12px;
+}
+
+.quality {
+  width: 174px;
+  margin-top: 12px;
+}
+
+.priceoptions {
+  color: #333333;
+  font-family: Roboto;
+  font-size: 14px;
+  color: #333333;
+  font-family: Roboto;
+  margin-top: 12px;
+  width: 80px;
+}
+
+.qtyselector {
+  display: flex;
+  align-items: center;
+}
+
+.minusbtn {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #e6e7eb;
+  border-radius: 2px 0 0 2px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-left: 24px;
+}
+
+.orangebtn {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #ff6600;
+  border-radius: 2px 0 0 2px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.minus {
+  background-image: url('../assets/3C91D364-A068-41BD-AEA5-8A01C1774BF8.png');
+  width: 14px;
+  height: 2px;
+}
+
+.activeminus {
+  background-image: url('../assets/minusOrange.png');
+  width: 14px;
+  height: 2px;
+}
+
+.quantity1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: inset 0 1px 0 0 #e6e7eb, inset 0 -1px 0 0 #e6e7eb;
+  width: 80px;
+  height: 40px;
+  color: #999999;
+}
+.quantity {
+  text-align: center;
+  box-shadow: inset 0 1px 0 0 #e6e7eb, inset 0 -1px 0 0 #e6e7eb;
+  width: 75px;
+  height: 38px;
+  color: #999999;
+  border: none;
+}
+
+.plusbtn {
+  background-color: rgba(255, 255, 255, 0);
+  border: 1px solid #ff6600;
+  border-radius: 0 2px 2px 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.plus {
+  background-image: url('../assets/icons8-plus_math.png');
+  width: 14px;
+  height: 14px;
+}
+
+.assurance {
+  display: flex;
+  flex-direction: row;
+
+  width: 306px;
+  height: 16px;
+  margin-top: 24px;
+}
+
+.lockicon {
+  background-image: url('../assets/lockicon.svg');
+  width: 12px;
+  height: 14px;
+}
+
+.tradeassurance {
+  color: #999999;
+  font-family: Roboto;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.assuranceinfo {
+  color: #999999;
+  font-family: Roboto;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.payments {
+  display: flex;
+  align-items: center;
+  width: 130px;
+  height: 16px;
+  margin-top: 12px;
+}
+
+.paymentsinfo {
+  color: #999999;
+  font-family: Roboto;
+  font-size: 12px;
+  width: 60px;
+}
+
+.visa {
+  background-image: url('../assets/icons8-visa.svg');
+  width: 17px;
+  height: 12px;
+  margin-right: 4px;
+}
+
+.mastercard {
+  background-image: url('../assets/icons8-mastercard.svg');
+  width: 17px;
+  height: 12px;
+  margin-right: 4px;
+}
+.applepay {
+  background-image: url('../assets/icons8-apple_pay.svg');
+  width: 30px;
+  height: 12px;
+}
+.links {
+  display: flex;
+  width: 252px;
+  height: 16px;
+  margin-top: 14px;
+}
+
+.logistics {
+  color: #999999;
+  font-family: Roboto;
+  font-size: 12px;
+  margin-right: 24px;
+  cursor: pointer;
+}
+
+.solutions {
+  color: #999999;
+  font-family: Roboto;
+  font-size: 12px;
+  cursor: pointer;
+}

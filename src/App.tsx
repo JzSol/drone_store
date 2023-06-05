@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import './styles/infoBox2.scss';
 import { Img } from './Components/Img';
 import { InfoBox } from './Components/InfoBox';
 import { Checkout } from './Components/Checkout';

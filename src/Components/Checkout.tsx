@@ -5,19 +5,32 @@ export const Checkout = () => {
     <div className='checkout'>
       <div className='upperinfo'>
         <div className='shippinginf'>
-          Ship to South Africa by Express UPS Sav…
+          Ship to <u>South Africa by Express UPS Sav…</u>
         </div>
         <div className='price'>r 6,036.74</div>
       </div>
 
       <div className='info'>
-        <div className='leadt'>Lead Time 10 days</div>
-        <div className='shippingt'>Shipping time 6-10 days</div>
+        <div className='leadt'>
+          <span>Lead Time</span>
+          <span className='boldText'>10</span>
+          <span>days</span>
+          <div className='iconInfo'></div>
+        </div>
+
+        <div className='shippingt'>
+          <span>Shipping time</span>
+          <span className='boldText'>6-10</span>
+          <span>days</span>
+          <div className='iconInfo'></div>
+        </div>
       </div>
 
       <div className='buttons'>
         <button className='login'>Login to Purchase</button>
-        <button className='contact'>Contact the Supplier</button>
+        <button className='contact'>
+          <div className='mailIcon'></div>Contact the Supplier
+        </button>
       </div>
     </div>
   );
