@@ -1,3 +1,7 @@
+### `Deployed Project`
+
+-----> https://jzsol.github.io/vaimo_ta/
+
 ## Available Scripts
 
 In the project directory, you can run:
