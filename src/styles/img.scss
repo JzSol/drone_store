@@ -6,4 +6,9 @@
 
   background-image: url('../assets/Image.jpg');
   background-size: contain;
+  @media (max-width: 950px) {
+    margin-top: 0;
+    width: 360px;
+    margin-left: 0;
+  }
 }

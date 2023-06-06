@@ -1,17 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 .infobox {
-  border: 1px solid yellow;
+  // Set the width and height of the box.
   width: 526px;
   height: 554px;
   margin-left: 24px;
   margin-top: 48px;
+
+  @media (max-width: 950px) {
+    margin-top: 0;
+    width: 360px;
+    margin-left: 0;
+  }
 }
+
 .badges {
   display: flex;
-
   width: 271px;
   height: 20px;
+
+  @media (max-width: 950px) {
+    margin-left: 12px;
+  }
 }
 
 .shipping {
@@ -45,6 +55,7 @@
 }
 
 .okIcon {
+  background-image: url('../assets/okicon.png');
   width: 12px;
   height: 12px;
   margin-right: 4px;
@@ -72,9 +83,31 @@
   width: 526px;
 
   margin-top: 8px;
+
+  @media (max-width: 950px) {
+    margin-left: 12px;
+    height: 72px;
+    width: 336px;
+  }
+}
+
+.labelBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 120px;
+  margin-top: -24px;
+
+  @media (max-width: 950px) {
+    margin-left: 80px;
+    margin-top: -21px;
+  }
 }
 
 .label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 2px;
   width: 111px;
   height: 20px;
@@ -91,6 +124,11 @@
   line-height: 16px;
 
   border-radius: 2px;
+
+  @media (max-width: 950px) {
+    margin-left: 143px;
+    width: 111px;
+  }
 }
 
 .ratings {
@@ -101,6 +139,10 @@
   width: 242px;
   height: 16px;
   margin-top: 12px;
+
+  @media (max-width: 950px) {
+    margin-left: 12px;
+  }
 }
 
 .ratingcount {
@@ -133,6 +175,11 @@
   width: 526px;
   height: 64px;
   margin-top: 12px;
+
+  @media (max-width: 950px) {
+    margin-left: 12px;
+    width: 336px;
+  }
 }
 
 .productprice {
@@ -140,6 +187,10 @@
   color: #ff6600;
   font-family: Roboto;
   font-size: 16px;
+
+  @media (max-width: 950px) {
+    width: 135px;
+  }
 }
 
 .discount {
@@ -158,6 +209,10 @@
   font-family: Roboto;
   font-size: 14px;
   margin-left: 12px;
+
+  @media (max-width: 950px) {
+    margin-left: 0;
+  }
 }
 
 .option2 {
@@ -176,12 +231,21 @@
   width: 526px;
   height: 40px;
   margin-top: 12px;
+
+  @media (max-width: 950px) {
+    margin-left: 12px;
+    width: 336px;
+  }
 }
 
 .expoicon {
+  background-image: url('../assets/MarchExpoLogo.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
   width: 76px;
   height: 40px;
-  object-fit: contain;
 }
 
 .freeShipping {
@@ -196,6 +260,21 @@
   color: #ff6600;
   font-family: Roboto;
   font-size: 14px;
+
+  @media (max-width: 950px) {
+    display: none;
+  }
+}
+.forwardicon {
+  background-image: url('../assets/forwardicon.png');
+  width: 10px;
+  height: 14px;
+  margin-left: 25px;
+  cursor: pointer;
+
+  @media (max-width: 950px) {
+    margin-left: 45px;
+  }
 }
 
 .timer {
@@ -205,6 +284,10 @@
   width: 328px;
   height: 24px;
   margin-top: 24px;
+
+  @media (max-width: 950px) {
+    margin-left: 12px;
+  }
 }
 
 .offer {

@@ -1,5 +1,3 @@
-// import { Info } from '../types/Info';
-
 const API_URL = 'https://fe-assignment.vaimo.net/';
 
 export function wait(delay = 1000) {

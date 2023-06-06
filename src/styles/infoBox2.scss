@@ -1,5 +1,4 @@
 .products {
-  //   border: 2px solid black;
   width: 526px;
   height: 144px;
   margin-top: 24px;
@@ -7,18 +6,30 @@
 
 .container1 {
   display: flex;
+
+  @media (max-width: 950px) {
+    margin-left: 12px;
+  }
 }
 
 .container2 {
   display: flex;
   margin-left: 112px;
   margin-top: 12px;
+
+  @media (max-width: 950px) {
+    margin-left: 12px;
+  }
 }
 
 .container3 {
   display: flex;
   margin-left: 112px;
   margin-top: 12px;
+
+  @media (max-width: 950px) {
+    margin-left: 12px;
+  }
 }
 
 .Option {
@@ -28,11 +39,19 @@
   width: 122px;
 
   margin-top: 12px;
+
+  @media (max-width: 950px) {
+    display: none;
+  }
 }
 
 .quality {
   width: 174px;
   margin-top: 12px;
+
+  @media (max-width: 950px) {
+    width: 148px;
+  }
 }
 
 .priceoptions {
@@ -43,6 +62,10 @@
   font-family: Roboto;
   margin-top: 12px;
   width: 80px;
+
+  @media (max-width: 950px) {
+    width: 56px;
+  }
 }
 
 .qtyselector {
@@ -77,7 +100,7 @@
 }
 
 .minus {
-  background-image: url('../assets/3C91D364-A068-41BD-AEA5-8A01C1774BF8.png');
+  background-image: url('../assets/minusicon.png');
   width: 14px;
   height: 2px;
 }
@@ -104,6 +127,9 @@
   height: 38px;
   color: #999999;
   border: none;
+  @media (max-width: 950px) {
+    width: 40px;
+  }
 }
 
 .plusbtn {
@@ -131,6 +157,10 @@
   width: 306px;
   height: 16px;
   margin-top: 24px;
+
+  @media (max-width: 950px) {
+    margin-left: 12px;
+  }
 }
 
 .lockicon {
@@ -159,6 +189,10 @@
   width: 130px;
   height: 16px;
   margin-top: 12px;
+
+  @media (max-width: 950px) {
+    margin-left: 12px;
+  }
 }
 
 .paymentsinfo {
@@ -191,6 +225,11 @@
   width: 252px;
   height: 16px;
   margin-top: 14px;
+
+  @media (max-width: 950px) {
+    margin-top: 12px;
+    margin-left: 12px;
+  }
 }
 
 .logistics {

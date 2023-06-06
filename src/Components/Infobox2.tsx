@@ -1,17 +1,34 @@
-import { ChangeEvent, useRef, useState, FocusEvent } from 'react';
+import { ChangeEvent, useRef, FocusEvent } from 'react';
 import '../styles/infoBox2.scss';
+// Import utility to conditionally join classNames
 import classNames from 'classnames';
 
-export const InfoBox2 = () => {
-  const [option1, setOption1] = useState(0);
+// Define the types for props expected by the component
+interface InfoBoxProps {
+  option1: number;
+  setOption1: React.Dispatch<React.SetStateAction<number>>;
+  option2: number;
+  setOption2: React.Dispatch<React.SetStateAction<number>>;
+  option3: number;
+  setOption3: React.Dispatch<React.SetStateAction<number>>;
+}
+
+export const InfoBox2: React.FC<InfoBoxProps> = ({
+  option1,
+  setOption1,
+  option2,
+  setOption2,
+  option3,
+  setOption3,
+}) => {
+  // useRef hooks to store the last valid value
   const lastValidOption1 = useRef(0);
-
-  const [option2, setOption2] = useState(0);
   const lastValidOption2 = useRef(0);
-
-  const [option3, setOption3] = useState(0);
   const lastValidOption3 = useRef(0);
 
+  // Handlers for onChange events of input boxes
+  // If the new value is a valid number, updates state and last valid ref
+  // If not, the state is not updated
   const handleChange1 = (e: ChangeEvent<HTMLInputElement>) => {
     const val = parseInt(e.target.value);
     if (!isNaN(val) && val >= 0) {
@@ -19,7 +36,8 @@ export const InfoBox2 = () => {
       lastValidOption1.current = val;
     }
   };
-
+  // Handlers for onBlur events of input boxes
+  // If the current value is not valid, resets to the last valid value
   const handleBlur1 = (e: FocusEvent<HTMLInputElement>) => {
     const val = parseInt(e.target.value);
     if (isNaN(val) || val < 0) {
@@ -112,6 +130,7 @@ export const InfoBox2 = () => {
               onChange={handleChange2}
               onBlur={handleBlur2}
             />
+
             <button
               className='plusbtn'
               onClick={() => setOption2(option2 + 1)}>
@@ -133,6 +152,7 @@ export const InfoBox2 = () => {
                   activeminus: option3 > 0,
                 })}></div>
             </button>
+
             <input
               type='text'
               className='quantity'
@@ -156,12 +176,14 @@ export const InfoBox2 = () => {
         <div className='assuranceinfo'> protects your Alibaba.com orders</div>
       </div>
 
+      {/* Payment options */}
       <div className='payments'>
         <div className='paymentsinfo'>Payments:</div>
         <svg className='visa' />
         <svg className='mastercard' />
         <svg className='applepay' />
       </div>
+
       <div className='links'>
         <div className='logistics'>Alibaba.com Logistics</div>
         <div className='solutions'>Inspection Solutions</div>

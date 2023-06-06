@@ -1,14 +1,14 @@
 import '../styles/infoBox.scss';
 
-// import { fetchData } from '../api/info';
 import { useEffect, useState } from 'react';
-import { Info } from '../types/Info';
 import { InfoBox2 } from './Infobox2';
 
+// Type definitions for StarRating component props
 type Props = {
   rating: number;
 };
 
+// Component for showing star ratings
 const StarRating: React.FC<Props> = ({ rating }) => (
   <div>
     {Array.from({ length: 5 }, (_, i) => {
@@ -24,26 +24,25 @@ const StarRating: React.FC<Props> = ({ rating }) => (
   </div>
 );
 
-export const InfoBox = () => {
-  const [data, setData] = useState<Info[]>([]);
-  const [error, setError] = useState(false);
-  const [timeLeft, setTimeLeft] = useState('2d:01h:56m:49s');
+// Interface for InfoBox component props
+interface InfoBoxProps {
+  option1: number;
+  setOption1: React.Dispatch<React.SetStateAction<number>>;
+  option2: number;
+  setOption2: React.Dispatch<React.SetStateAction<number>>;
+  option3: number;
+  setOption3: React.Dispatch<React.SetStateAction<number>>;
+}
 
-  console.log(data, error);
-  useEffect(() => {
-    fetch('https://fe-assignment.vaimo.net/')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then(setData)
-      .catch((error) => {
-        console.error('Error fetching data: ', error);
-        setError(true);
-      });
-  }, []);
+export const InfoBox: React.FC<InfoBoxProps> = ({
+  option1,
+  setOption1,
+  option2,
+  setOption2,
+  option3,
+  setOption3,
+}) => {
+  const [timeLeft, setTimeLeft] = useState('2d:01h:56m:49s');
 
   useEffect(() => {
     const countdown = () => {
@@ -85,17 +84,11 @@ export const InfoBox = () => {
       <div className='badges'>
         <span className='shipping'>Ready to Ship</span>
         <span className='stock'>
-          <img
-            src='/icons8-ok.png'
-            alt='Icon of a checkmark'
-            className='okIcon'></img>
+          <div className='okIcon' />
           In Stock
         </span>
         <span className='dispatch'>
-          <img
-            src='/icons8-ok.png'
-            alt='Icon of a checkmark'
-            className='okIcon'></img>
+          <div className='okIcon' />
           Fast Dispatch
         </span>
       </div>
@@ -103,13 +96,14 @@ export const InfoBox = () => {
       <div className='title'>
         2021 hot selling GPS 5G quadcopter drone with camera remote control
         aircraft drone WiFi mini drone camera
-        {/* <div className='labelBox'> */}
-        <span className='label'>Hot sale products</span>
-        {/* </div> */}
+        <div className='labelBox'>
+          <span className='label'>Hot sale products</span>
+        </div>
       </div>
 
       <div className='ratings'>
-        <StarRating rating={4} />
+        {/* Pass rating here for stars */}
+        <StarRating rating={5} />
         <div className='ratingcount'> 5.0</div>
         <div className='reviews'> 7 reviews</div>
         <div className='buyers'>19 buyers</div>
@@ -120,20 +114,16 @@ export const InfoBox = () => {
           R 78.50 - R 895.31<div className='discount'>R 98.12 - R 1,119.14</div>
         </div>
         <div className='option'>
-          / Option <div className='option2'>2 Options </div>
+          / Option <div className='option2'>2 Options</div>
           <div>(Min. Order)</div>
         </div>
       </div>
 
       <div className='marchexpo'>
-        <img
-          src='/MarchExpoLogo.png'
-          alt='Logo of March Expo'
-          className='expoicon'
-        />
-
+        <div className='expoicon'></div>
         <div className='freeShipping'>• Free shipping (up to $40)</div>
         <div className='delivery'>• On-time delivery guaranteed</div>
+        <div className='forwardicon'></div>
       </div>
 
       <div className='timer'>
@@ -144,7 +134,14 @@ export const InfoBox = () => {
           {timeLeft}
         </div>
       </div>
-      <InfoBox2 />
+      <InfoBox2
+        option1={option1}
+        setOption1={setOption1}
+        option2={option2}
+        setOption2={setOption2}
+        option3={option3}
+        setOption3={setOption3}
+      />
     </div>
   );
 };

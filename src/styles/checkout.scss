@@ -8,12 +8,19 @@
   margin-left: 24px;
   margin-top: 48px;
   box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+  @media (max-width: 950px) {
+    width: 360px;
+    margin-bottom: 12px;
+  }
 }
 
 .upperinfo {
   display: flex;
   flex-direction: row;
   margin-left: 24px;
+  @media (max-width: 950px) {
+    margin-left: 26px;
+  }
 }
 
 .shippinginf {
@@ -25,6 +32,9 @@
   font-family: Roboto;
   font-size: 14px;
   cursor: pointer;
+  @media (max-width: 950px) {
+    width: 145px;
+  }
 }
 
 .price {
@@ -38,6 +48,9 @@
 
   font-weight: bold;
   text-transform: uppercase;
+  @media (max-width: 950px) {
+    margin-left: 53px;
+  }
 }
 
 .info {
@@ -99,6 +112,10 @@
   border: none;
   transition: background-color 0.3s;
 
+  @media (max-width: 950px) {
+    width: 284px;
+  }
+
   &:hover {
     background-color: #ff8533;
   }
@@ -131,6 +148,10 @@
   cursor: pointer;
   border: 1px solid #ff6600;
   transition: background-color 0.3s;
+
+  @media (max-width: 950px) {
+    width: 284px;
+  }
 
   &:hover {
     background-color: #f2f2f2;
