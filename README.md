@@ -1,6 +1,6 @@
 ### `Deployed Project`
 
------> https://jzsol.github.io/drone_store/
+
 
 ## Available Scripts
 
