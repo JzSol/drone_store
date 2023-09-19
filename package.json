@@ -1,6 +1,5 @@
 {
   "name": "drone_store",
-  "homepage": "http://jzsol.github.io/drone_store/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
